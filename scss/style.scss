@@ -1,0 +1,90 @@
+@import './config';
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: $cream;
+    @include flex();
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+    background-color: $white;
+    border-radius: 10px;
+    @include grid(1fr 1fr, 0px);
+
+    .image {
+        padding: 40px;
+        background-image: url('../images/image-product-desktop.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .text {
+        padding: 30px;
+        
+        .tag {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: $dark-grayish-blue;
+            opacity: 0.8;
+        }
+        
+        h1 {
+            margin: 20px 0;
+            font-size: 30px;
+            color: $very-dark-blue;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.4;
+            color: $dark-grayish-blue;
+            opacity: 0.8;
+        }
+
+        .price {
+            margin: 20px 0;
+
+            .heading {
+                font-size: 25px;
+                margin-right: 20px;
+                color: $dark-cyan;
+            }
+
+            span:last-child {
+                font-size: 12px;
+                text-decoration: line-through;
+                color: $dark-grayish-blue;
+                opacity: 0.8;
+            }
+        }
+
+        button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            background-color: $dark-cyan;
+            color: $white;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            opacity: 0.9;            
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            .fas {
+                margin-right: 10px;
+            }
+        }
+    }
+    
+}
