@@ -16,11 +16,15 @@ body {
     @include grid(1fr 1fr, 0px);
 
     .image {
-        padding: 40px;
         background-image: url('../images/image-product-desktop.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media only screen and (max-width: 630px) {
+            background-image: url('../images/image-product-mobile.jpg');
+            padding: 200px 0;
+        }
     }
 
     .text {
@@ -85,6 +89,15 @@ body {
                 margin-right: 10px;
             }
         }
+    }
+
+    @media only screen and (max-width: 630px) {
+        max-width: 80%;
+        display: block;
+    }
+
+    @media only screen and (max-width: 500px) {
+        max-width: 95%;
     }
     
 }

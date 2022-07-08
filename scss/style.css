@@ -46,11 +46,17 @@ body {
 }
 
 .container .image {
-  padding: 40px;
   background-image: url("../images/image-product-desktop.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 630px) {
+  .container .image {
+    background-image: url("../images/image-product-mobile.jpg");
+    padding: 200px 0;
+  }
 }
 
 .container .text {
@@ -116,5 +122,18 @@ body {
 
 .container .text button .fas {
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 630px) {
+  .container {
+    max-width: 80%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    max-width: 95%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
